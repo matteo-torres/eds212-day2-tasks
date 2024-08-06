@@ -11,3 +11,41 @@ editor_options:
 library(tidyverse, palmerpenguins)
 ```
 
+# Find the slope of the following functions in R
+
+## *f(x) = x^2^* at *x = 3*
+```{r}
+# create an expression ----
+fx<- expression(x^2)
+fx
+
+# find the derivative of fx with respect to x ----
+df_dx<- D(expr= fx, name= "x")
+df_dx
+
+# define the value of x at 3 ----
+x<- 3
+
+# evaluate df_dx at x ----
+slope_fx<- eval(df_dx)
+slope_fx
+```
+
+## *P(a) = 2(3a +2)^4^ - 5* at *a = 1.2*
+```{r}
+# create an expression ----
+Pa<- expression(2*(3*a+2)^4-5)
+Pa
+
+# find the derivative of Pa with respect to a ----
+dP_da<- D(expr= Pa, name="a")
+dP_da
+
+# define the value of a at 1.2 ----
+a<- 1.2
+
+# evaluate dP_da at a ----
+slope_Pa<- eval(dP_da)
+slope_Pa
+```
+
