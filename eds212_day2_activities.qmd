@@ -8,7 +8,8 @@ editor_options:
 
 ```{r}
 # load packages
-library(tidyverse, palmerpenguins)
+library(tidyverse)
+library(palmerpenguins)
 ```
 
 # Find the slope of the following functions in R
@@ -47,5 +48,21 @@ a<- 1.2
 # evaluate dP_da at a ----
 slope_Pa<- eval(dP_da)
 slope_Pa
+```
+
+```{r}
+# checking for variables
+head(penguins)
+
+# make a plot (bill length/ bill depth)
+ggplot(data= penguins, aes(x= bill_length_mm, y= bill_depth_mm, color= species)) +
+  geom_point()
+```
+
+```{r}
+# make a plot (flipper length by species)
+ggplot(data= penguins, aes(x= species, y= flipper_length_mm, color= species)) +
+  geom_jitter() +
+  ggtitle("Flipper Lengths of Penguin Species")
 ```
 
